@@ -20,7 +20,7 @@
     }
 
     .question-right{
-        border-left: 2px solid black;
+        border-left: 1px solid black;
         font-size: 20px;
         padding: 10px
     }
@@ -31,7 +31,7 @@
     }
 
     .answer-right{
-        border-left: 2px solid black;
+        border-left: 1px solid black;
         font-size:15px; 
         padding: 15px; 
         text-align: center;
@@ -45,11 +45,17 @@
 
     .headered {
         text-align: center;
-        background-color: rgb(192, 192, 192, 0.589);
+        background-color: rgb(201, 199, 199);
     }
 
     img{
-        border: 3px solid rgba(192, 192, 192, 0.589);
+        border: 3px solid rgb(201, 199, 199);
+    }
+
+    .navbar-headers{
+        text-align: center;
+        border-right: solid 1px rgb(34, 34, 34);
+        font-family: monospace;
     }
 
 </style>
@@ -60,11 +66,24 @@
 <h2 style="font-size: 20px; line-height: 1px;">Group all your favorite retailers into one! </h2>
 </div>
 
+<nav class="navbar" style="margin-top: 20px; border: solid 1px rgb(34, 34, 34); background-color: rgb(201, 199, 199);">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li class="navbar-headers"><a href="index.html" style="color: black">Home</a></li>
+            <li class="navbar-headers"><a href="newreleases.html" style="color: black;">New Releases</a></li>
+            <li class="navbar-headers"><a href="popular.html" style="color: black">Popular</a></li>
+            <li class="navbar-headers"><a href="bestdeals.html" style="color: black">Best Deals</a></li>
+            <li class="navbar-headers"><a href="description.html" style="color: black">About Ravine Personal Project</a></li>
+        </ul>
+    </div>
+</nav>
+
 <!-- Table -->
 <div style="font-family:monospace;" class= "container-fluid" >
 
     <!-- Top Set of Rows -->
-    <div class="row headered" style="margin-top:18px; border: solid black;">
+    <div class="row headered" style="margin-top:18px; border: 1px solid black;">
         <div class="col-md-6 question-left">
             What is Ravine Personal Project?
         </div>
@@ -73,7 +92,7 @@
         </div>
     </div>
 
-    <div class="row" style = "border: solid black; border-top: 0;">
+    <div class="row" style = "border: 1px solid black; border-top: 0;">
         <div class="col-md-6 answer-left">
             A site that will collect all items available for purchase from all your favorite retailers and present them in one place.
         </div>
@@ -83,7 +102,7 @@
     </div>
 
     <!-- Bot Set of Rows -->
-    <div class="row headered" style="border: solid black; border-top:0">
+    <div class="row headered" style="border: 1px solid black; border-top:0">
         <div class="col-md-6 question-left">
             What kinds of stores will Ravine Personal Project display?
         </div>
@@ -92,7 +111,7 @@
         </div>
     </div>
 
-    <div class="row" style = "border: solid black; border-top: 0">
+    <div class="row" style = "border: 1px solid black; border-top: 0">
         <div class="col-md-6 answer-left">
             <img src="https://logodix.com/logo/65958.jpg" alt="Clothing Retailer Logos" style="width:75%;height:auto;">
         </div>
