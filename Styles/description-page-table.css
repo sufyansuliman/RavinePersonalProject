@@ -1,0 +1,32 @@
+    .question-right {
+        border-left: 1px solid black;
+        font-size: 20px;
+        padding: 10px
+    }
+
+    .question-left {
+        font-size:20px; 
+        padding: 10px
+    }
+
+    .answer-right {
+        border-left: 1px solid black;
+        font-size:15px; 
+        padding: 15px; 
+        text-align: center;
+    }
+
+    .answer-left {
+        font-size:15px; 
+        padding: 15px; 
+        text-align:center;
+    }
+
+    .headered {
+        text-align: center;
+        background-color: rgb(201, 199, 199);
+    }
+
+    img {
+        border: 3px solid rgb(201, 199, 199);
+    }

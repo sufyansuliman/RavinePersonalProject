@@ -1,0 +1,9 @@
+@import "description-page-table.css";
+@import "navbar.css";
+
+    .centered {
+        text-align: center;
+        line-height: 15px;
+        color: black;
+        font-family: monospace;
+    }
