@@ -4,7 +4,7 @@
         font-family: monospace;
     }
 
-    .navbar-format{
+    #navbar-format{
         margin-top: 20px; 
         border: solid 1px rgb(34, 34, 34); 
         background-color: rgb(201, 199, 199);
