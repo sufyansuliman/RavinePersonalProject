@@ -8,7 +8,6 @@ function applyFilters(){
                 allBoxes[j].checked = true;
             }
         } 
-        console.log(allBoxes[i].value)
         if (allBoxes[i].checked){
             checked.push(allBoxes[i].value)
         }
