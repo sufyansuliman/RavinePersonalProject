@@ -4,10 +4,12 @@ function applyFilters(){
     var checked = [];
     for (var i=0; i < allBoxes.length; i++){
         if (allChecked[0].checked){
-            for (var j=0; i < allBoxes.length; i++){
-                checked.push(allBoxes[i].value)
+            for (var j=0; j < allBoxes.length; j++){
+                allBoxes[j].checked = true;
             }
-        } else if (allBoxes[i].checked){
+        } 
+        console.log(allBoxes[i].value)
+        if (allBoxes[i].checked){
             checked.push(allBoxes[i].value)
         }
     }
