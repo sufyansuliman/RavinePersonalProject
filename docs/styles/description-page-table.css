@@ -24,11 +24,11 @@
 
     .headered {
         text-align: center;
-        background-color: #d2b48c;
+        background-color: #e6dcc7;
     }
 
     img {
-        border: 3px solid #d2b48c;
+        border: 3px solid #e6dcc7;
         width:75%;
         height:auto;
     }
@@ -38,9 +38,15 @@
         border-top: 0px;
     }
 
-    .bot-3-rows {
+    .mid-2-rows {
         border: 1px solid black; 
         border-top: 0;
+    }
+
+    .bot-row {
+        border: 1px solid black;
+        border-top: 0;
+        border-bottom: 0;
     }
 
     .line-fix {
