@@ -16,6 +16,7 @@ function applyFilters(){
 }
 
 function sidebarPop(){
+    var sidebar = document.getElementById("menu-toggle");
     var wrap = document.getElementById("wrapper");
     wrap.classList.toggle("sidebar-displayed")
 }
