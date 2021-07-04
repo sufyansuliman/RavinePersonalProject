@@ -3,31 +3,33 @@
 <!-- Meta Data -->
 <head>
     <meta charset="utf-8">
-        <title> RavinePersonalProject </title>
+        <title> Shopfilt </title>
     <meta name = "description" content = "A site that groups all your favorite stores into one">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" type = "text/css" href="styles/header-general.css"/>
+    <script type="text/javascript" src="scripts/filter.js"></script>
 </head>
 <!-- Top Header -->
 <div class = "centered" >
-    <h1>Ravine Personal Project</h1>
+    <h1>Shopfilt <i class="fas fa-running fa-sm"></i> <i class="fas fa-shopping-bag fa-sm"></i></h1>
     <h2 class="one-liner">Group all your favorite retailers into one! </h2>
 </div>
-
+<!-- Navbar -->
 <nav class="navbar" id = "navbar-format">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
+            <li class="navbar-headers"><a class="black-text" id="menu-toggle" onclick = "return sidebarPop()"><i class="fas fa-outdent"></i></a></li>
             <li class="navbar-headers"><a class="black-text" href="index.html" >Home <i class="fas fa-home"></i></a></li>
             <li class="navbar-headers"><a class="black-text" href="newreleases.html">New Releases <i class="fas fa-newspaper"></i></a></li>
             <li class="navbar-headers"><a class="black-text" href="popular.html">Popular <i class="fas fa-fire-alt"></i></a></li>
             <li class="navbar-headers"><a class="black-text" href="bestdeals.html">Best Deals <i class="fas fa-percent"></i></a></li>
-            <li class="navbar-headers"><a class="black-text" href="description.html">About Ravine Personal Project <i class="far fa-address-card"></i></a></li>
+            <li class="navbar-headers"><a class="black-text" href="description.html">About Shopfilt <i class="far fa-address-card"></i></a></li>
         </ul>
     </div>
 </nav>
 <!-- Table -->
-<div style="font-family:monospace;" class= "container-fluid" >
+<div class= "container-fluid fonted">
     <!-- Top Set of Rows -->
     <div class="row headered top-row" >
         <div class="col-md-6 question-left">
@@ -37,7 +39,7 @@
             What does Ravine Personal Project hope to accomplish?
         </div>
     </div>
-    <div class="row bot-3-rows">
+    <div class="row mid-2-rows">
         <div class="col-md-6 answer-left">
             A site that will collect all items available for purchase from all your favorite retailers and present them in one place.
         </div>
@@ -46,7 +48,7 @@
         </div>
     </div>
     <!-- Bot Set of Rows -->
-    <div class="row headered bot-3-rows">
+    <div class="row headered mid-2-rows">
         <div class="col-md-6 question-left">
             What kinds of stores will Ravine Personal Project display?
         </div>
@@ -54,7 +56,7 @@
         What kinds of filters would I be able to use to shop?
         </div>
     </div>
-    <div class="row bot-3-rows">
+    <div class="row bot-row">
         <div class="col-md-6 answer-left">
             <img src="https://logodix.com/logo/65958.jpg" alt="Clothing Retailer Logos">
         </div>

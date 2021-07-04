@@ -1,5 +1,6 @@
 @import "description-page-table.css";
 @import "navbar.css";
+@import "sidebar.css";
 
     .centered {
         text-align: center;
@@ -15,4 +16,8 @@
 
     .black-text {
         color: black
+    }
+
+    .fonted {
+        font-family: monospace;
     }

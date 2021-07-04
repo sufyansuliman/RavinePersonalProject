@@ -24,22 +24,26 @@
 
     .headered {
         text-align: center;
-        background-color: rgb(201, 199, 199);
+        background-color: #e6dcc7;
     }
 
     img {
-        border: 3px solid rgb(201, 199, 199);
+        border: 3px solid #e6dcc7;
         width:75%;
         height:auto;
     }
 
     .top-row {
-        margin-top:18px; 
         border: 1px solid black;
     }
 
-    .bot-3-rows {
+    .mid-2-rows {
         border: 1px solid black; 
+        border-top: 0;
+    }
+
+    .bot-row {
+        border: 1px solid black;
         border-top: 0;
     }
 
