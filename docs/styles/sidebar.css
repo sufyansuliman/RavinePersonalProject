@@ -58,3 +58,12 @@ h5{
 #menu-toggle{
     cursor: pointer;
 }
+
+#accordion li{
+    display: none;
+}
+
+#accordion div:target li{
+    display: block;
+}
+
