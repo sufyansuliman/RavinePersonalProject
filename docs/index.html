@@ -31,6 +31,7 @@
 <!-- SideBar -->
 <div id = "wrapper" class = "fonted">
     <div id = "sidebar-wrapper">
+        
         <a class = "accord" onclick = "return accordOut(event)">Brands</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
@@ -41,7 +42,7 @@
                 <li><input type="checkbox" class ="brandAll" value="All" >Show All</li>
             </ul>
         </div>
-        <br>
+        
         <a class = "accord" onclick = "return accordOut(event)">Articles</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
@@ -49,13 +50,22 @@
                 <li><input type="checkbox" class ="article" value="pants" >Pants</li>
                 <li><input type="checkbox" class ="article" value="hats" >Hats</li>
                 <li><input type="checkbox" class ="article" value="shoes" >Shoes</li>
-                <li><input type="checkbox" class ="articlAll" value="All" >Show All</li>
+                <li><input type="checkbox" class ="articleAll" value="All" >Show All</li>
+            </ul>
+        </div>
+
+        <a class = "accord" onclick = "return accordOut(event)">Gender</a>
+        <div class="accordion-content">
+            <ul class = "sidebar-nav filter-group">
+                <li><input type="checkbox" class ="gender" value="men" >Men</li>
+                <li><input type="checkbox" class ="gender" value="women" >Women</li>
+                <li><input type="checkbox" class ="genderAll" value="All" >Show All</li>
             </ul>
         </div>
 
         <h4><input class = "filter-button" type="submit" value="Filter" onclick="return applyFilters();"></h4>
     </div>
-    </div>
+    
 <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
@@ -66,5 +76,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </html>

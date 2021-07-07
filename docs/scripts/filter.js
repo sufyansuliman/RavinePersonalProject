@@ -8,7 +8,6 @@ function allFilter(sections){
     for (let sec in sections){
         var allBoxes = document.getElementsByClassName(sections[sec]);
         var allChecked = document.getElementsByClassName(sections[sec] + "All");
-        console.log(filters)
         if (allChecked[0].checked){
             for (var j=0; j < allBoxes.length; j++){
                 allBoxes[j].checked = true;
@@ -35,7 +34,6 @@ function sidebarPop(){
 
 function accordOut(event){
     var cont = event.target.nextElementSibling;
-    console.log(cont)
     cont.classList.toggle("accordPop")
 }
 
