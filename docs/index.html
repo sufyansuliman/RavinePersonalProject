@@ -31,7 +31,7 @@
 <!-- SideBar -->
 <div id = "wrapper" class = "fonted">
     <div id = "sidebar-wrapper">
-        
+        <!-- Brand Accordion -->
         <a class = "accord" onclick = "return accordOut(event)">Brands</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
@@ -42,7 +42,7 @@
                 <li><input type="checkbox" class ="brandAll" value="All" >Show All</li>
             </ul>
         </div>
-        
+        <!-- Article Accordion -->
         <a class = "accord" onclick = "return accordOut(event)">Articles</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
@@ -53,7 +53,7 @@
                 <li><input type="checkbox" class ="articleAll" value="All" >Show All</li>
             </ul>
         </div>
-
+        <!-- Gender Accordion -->
         <a class = "accord" onclick = "return accordOut(event)">Gender</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
@@ -62,10 +62,8 @@
                 <li><input type="checkbox" class ="genderAll" value="All" >Show All</li>
             </ul>
         </div>
-
         <h4><input class = "filter-button" type="submit" value="Filter" onclick="return applyFilters();"></h4>
     </div>
-    
 <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
@@ -76,6 +74,5 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 </html>

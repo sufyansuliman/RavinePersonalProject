@@ -27,13 +27,12 @@ var filters = {
     "gender": [],
 };
 
-function sidebarPop(){
-    var wrap = document.getElementById("wrapper");
-    wrap.classList.toggle("sidebar-displayed");
-}
-
 function accordOut(event){
     var cont = event.target.nextElementSibling;
     cont.classList.toggle("accordPop")
 }
 
+function sidebarPop(){
+    var wrap = document.getElementById("wrapper");
+    wrap.classList.toggle("sidebar-displayed");
+}
