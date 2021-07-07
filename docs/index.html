@@ -31,15 +31,30 @@
 <!-- SideBar -->
 <div id = "wrapper" class = "fonted">
     <div id = "sidebar-wrapper">
-        <h5><strong>Brand</strong></h5>
-        <ul class = "sidebar-nav filter-group">
-            <li><input type="checkbox" class ="brand" value="Nike" >Nike</li>
-            <li><input type="checkbox" class ="brand" value="Adidas" >Adidas</li>
-            <li><input type="checkbox" class ="brand" value="Champion" >Champion</li>
-            <li><input type="checkbox" class ="brand" value="Puma" >Puma</li>
-            <li><input type="checkbox" class ="brandAll" value="All" >Show All</li>
-        </ul>
+        <a class = "accord" onclick = "return accordOut(event)">Brands</a>
+        <div class="accordion-content">
+            <ul class = "sidebar-nav filter-group">
+                <li><input type="checkbox" class ="brand" value="Nike" >Nike</li>
+                <li><input type="checkbox" class ="brand" value="Adidas" >Adidas</li>
+                <li><input type="checkbox" class ="brand" value="Champion" >Champion</li>
+                <li><input type="checkbox" class ="brand" value="Puma" >Puma</li>
+                <li><input type="checkbox" class ="brandAll" value="All" >Show All</li>
+            </ul>
+        </div>
+        <br>
+        <a class = "accord" onclick = "return accordOut(event)">Articles</a>
+        <div class="accordion-content">
+            <ul class = "sidebar-nav filter-group">
+                <li><input type="checkbox" class ="article" value="shirts" >Shirts</li>
+                <li><input type="checkbox" class ="article" value="pants" >Pants</li>
+                <li><input type="checkbox" class ="article" value="hats" >Hats</li>
+                <li><input type="checkbox" class ="article" value="shoes" >Shoes</li>
+                <li><input type="checkbox" class ="articlAll" value="All" >Show All</li>
+            </ul>
+        </div>
+
         <h4><input class = "filter-button" type="submit" value="Filter" onclick="return applyFilters();"></h4>
+    </div>
     </div>
 <!-- Page Content -->
     <div id="page-content-wrapper">

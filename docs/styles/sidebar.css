@@ -60,3 +60,10 @@ h5 {
     cursor: pointer;
 }
 
+.accordion-content{
+    display: none;
+}
+
+.accordPop{
+    display: block !important;
+}

@@ -1,26 +1,41 @@
 function applyFilters(){
-    brandFilter();
+    var allSections = ["brand", "article", "gender"]
+    allFilter(allSections);
+    console.log(filters);
 }
 
-function brandFilter(){
-    var allBoxes = document.getElementsByClassName("brand");
-    var allChecked = document.getElementsByClassName("brandAll");
-    var checked = [];
-    if (allChecked[0].checked){
-        for (var j=0; j < allBoxes.length; j++){
-            allBoxes[j].checked = true;
+function allFilter(sections){
+    for (let sec in sections){
+        var allBoxes = document.getElementsByClassName(sections[sec]);
+        var allChecked = document.getElementsByClassName(sections[sec] + "All");
+        console.log(filters)
+        if (allChecked[0].checked){
+            for (var j=0; j < allBoxes.length; j++){
+                allBoxes[j].checked = true;
+            }
+        }
+        for (var i=0; i < allBoxes.length; i++){ 
+            if (allBoxes[i].checked){
+                filters[sections[sec]].push(allBoxes[i].value)
+            }
         }
     }
-    for (var i=0; i < allBoxes.length; i++){ 
-        if (allBoxes[i].checked){
-            checked.push(allBoxes[i].value)
-        }
-    }
-    console.log(checked)
 }
+
+var filters = {
+    "brand": [],
+    "article" : [],
+    "gender": [],
+};
 
 function sidebarPop(){
     var wrap = document.getElementById("wrapper");
-    wrap.classList.toggle("sidebar-displayed")
+    wrap.classList.toggle("sidebar-displayed");
+}
+
+function accordOut(event){
+    var cont = event.target.nextElementSibling;
+    console.log(cont)
+    cont.classList.toggle("accordPop")
 }
 
