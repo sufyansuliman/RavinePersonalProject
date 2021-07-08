@@ -1,3 +1,9 @@
+var filters = {
+    "brand": [],
+    "article" : [],
+    "gender": [],
+};
+
 function applyFilters(){
     var allSections = ["brand", "article", "gender"]
     allFilter(allSections);
@@ -6,6 +12,7 @@ function applyFilters(){
 
 function allFilter(sections){
     for (let sec in sections){
+        filters[sections[sec]] = []
         var allBoxes = document.getElementsByClassName(sections[sec]);
         var allChecked = document.getElementsByClassName(sections[sec] + "All");
         if (allChecked[0].checked){
@@ -21,15 +28,10 @@ function allFilter(sections){
     }
 }
 
-var filters = {
-    "brand": [],
-    "article" : [],
-    "gender": [],
-};
 
 function accordOut(event){
     var cont = event.target.nextElementSibling;
-    cont.classList.toggle("accordPop")
+    cont.classList.toggle("accord-pop")
 }
 
 function sidebarPop(){
