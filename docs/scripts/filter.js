@@ -80,7 +80,6 @@ function accordOut(event){
 //Pushes appropriate accordions out on reload depending if there was a filter applied in that accordion
 function accordionPops(){
     keys = Object.keys(mySession)
-    console.log("hey", keys)
     for (i in keys){
         if (mySession[keys[i]] != ""){
             document.getElementById(keys[i]).click()
