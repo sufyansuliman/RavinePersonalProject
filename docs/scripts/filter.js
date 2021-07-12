@@ -8,18 +8,19 @@ var filters = {
     "gender": [],
 };
 
+//All filter sections
+var allSections = ["brand", "article", "gender"]
+
 //Master Function when filter is clicked
 function applyFilters(){
-    var allSections = ["brand", "article", "gender"]
     allFilter(allSections);
-    console.log("Filter was clicked, these filters applied:", mySession);
+    console.log("Filter was clicked, these filters applied:", filters);
 }
 
 //Adds checked boxes to filter and session
 function allFilter(sections){
     for (let sec in sections){
         filters[sections[sec]] = []
-        mySession[sections[sec]] = []
         var allBoxes = document.getElementsByClassName(sections[sec]);
         var allChecked = document.getElementsByClassName(sections[sec] + "All");
         if (allChecked[0].checked){
@@ -32,8 +33,8 @@ function allFilter(sections){
                 filters[sections[sec]].push(allBoxes[i].id)
             }
         }
-        mySession.setItem(sections[sec], filters[sections[sec]]);
     }
+    mySession.setItem("filters", JSON.stringify(filters))
 }
 
 //Runs on page load and checks boxes that were in session storage
@@ -41,28 +42,19 @@ function filterStoring(){
     if (mySession == null){
         return
     } else {
+        mySessionJson = sessionParser()
         sidebarPop()
-        accordionPops()
-        for (i in mySession){
-            list = splitter(mySession[i])
-            for (i in list){
-                if (document.getElementById(list[i]) != null){
-                    document.getElementById(list[i]).checked = true;
+        accordionPops(mySessionJson)
+        for (i in mySessionJson){
+            var curr = mySessionJson[i]
+            for (j in curr){
+                if (document.getElementById(curr[j]) != null){
+                    document.getElementById(curr[j]).checked = true;
                 }
             }
         }
     }
-    console.log("Page reloaded, here are session details:", mySession)
-}
-
-//Helper function to split the strings in session storage
-function splitter(objectKey){
-    try {
-        var list = objectKey.split(",")
-        return list
-    } catch(err){ 
-        return []
-    }
+    console.log("Page reloaded, here are session details:", mySessionJson)
 }
 
 //Pop side bar out or in
@@ -78,11 +70,18 @@ function accordOut(event){
 }
 
 //Pushes appropriate accordions out on reload depending if there was a filter applied in that accordion
-function accordionPops(){
-    keys = Object.keys(mySession)
+function accordionPops(mySessionJson){
+    keys = Object.keys(mySessionJson)
     for (i in keys){
-        if (mySession[keys[i]] != ""){
+        if (mySessionJson[keys[i]] != ""){
             document.getElementById(keys[i]).click()
         }
     }
+}
+
+//Parses session storage
+function sessionParser(){
+    var filtersParsed = mySession.filters
+    filtersParsed = JSON.parse(filtersParsed)
+    return filtersParsed
 }
