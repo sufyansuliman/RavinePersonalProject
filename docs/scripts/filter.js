@@ -14,7 +14,6 @@ var allSections = ["brand", "article", "gender"]
 //Master Function when filter is clicked
 function applyFilters(){
     allFilter(allSections);
-    console.log("Filter was clicked, these filters applied:", filters);
 }
 
 //Adds checked boxes to filter and session
@@ -54,7 +53,6 @@ function filterStoring(){
             }
         }
     }
-    console.log("Page reloaded, here are session details:", mySessionJson)
 }
 
 //Pop side bar out or in
