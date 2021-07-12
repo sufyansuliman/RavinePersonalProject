@@ -32,34 +32,34 @@
 <div id = "wrapper" class = "fonted">
     <div id = "sidebar-wrapper">
         <!-- Brand Accordion -->
-        <a class = "accord" onclick = "return accordOut(event)">Brands</a>
+        <body onload="filterStoring()">
+        <a class = "accord" id = "brand" onclick = "return accordOut(event)">Brands</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
-                <li><input type="checkbox" class ="brand" value="Nike" >Nike</li>
-                <li><input type="checkbox" class ="brand" value="Adidas" >Adidas</li>
-                <li><input type="checkbox" class ="brand" value="Champion" >Champion</li>
-                <li><input type="checkbox" class ="brand" value="Puma" >Puma</li>
-                <li><input type="checkbox" class ="brandAll" value="All" >Show All</li>
-            </ul>
+                <li><input type="checkbox" class ="brand" id="Nike" >Nike</li>
+                <li><input type="checkbox" class ="brand" id="Adidas" >Adidas</li>
+                <li><input type="checkbox" class ="brand" id="Champion" >Champion</li>
+                <li><input type="checkbox" class ="brand" id="Puma" >Puma</li>
+                <li><input type="checkbox" class ="brandAll" id="All" >Show All</li>
         </div>
         <!-- Article Accordion -->
-        <a class = "accord" onclick = "return accordOut(event)">Articles</a>
+        <a class = "accord" id = "article" onclick = "return accordOut(event)">Articles</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
-                <li><input type="checkbox" class ="article" value="Shirts" >Shirts</li>
-                <li><input type="checkbox" class ="article" value="Pants" >Pants</li>
-                <li><input type="checkbox" class ="article" value="Hats" >Hats</li>
-                <li><input type="checkbox" class ="article" value="Shoes" >Shoes</li>
-                <li><input type="checkbox" class ="articleAll" value="All" >Show All</li>
+                <li><input type="checkbox" class ="article" id = "Shirts">Shirts</li>
+                <li><input type="checkbox" class ="article" id ="Pants" >Pants</li>
+                <li><input type="checkbox" class ="article" id ="Hats" >Hats</li>
+                <li><input type="checkbox" class ="article" id ="Shoes" >Shoes</li>
+                <li><input type="checkbox" class ="articleAll" id ="All" >Show All</li>
             </ul>
         </div>
         <!-- Gender Accordion -->
-        <a class = "accord" onclick = "return accordOut(event)">Gender</a>
+        <a class = "accord" id = "gender" onclick = "return accordOut(event)">Gender</a>
         <div class="accordion-content">
             <ul class = "sidebar-nav filter-group">
-                <li><input type="checkbox" class ="gender" value="Men" >Men</li>
-                <li><input type="checkbox" class ="gender" value="Women" >Women</li>
-                <li><input type="checkbox" class ="genderAll" value="All" >Show All</li>
+                <li><input type="checkbox" class ="gender" id ="Men" >Men</li>
+                <li><input type="checkbox" class ="gender" id ="Women" >Women</li>
+                <li><input type="checkbox" class ="genderAll" id ="All" >Show All</li>
             </ul>
         </div>
         <h4><input class = "filter-button" type="submit" value="Filter" onclick="return applyFilters();"></h4>
