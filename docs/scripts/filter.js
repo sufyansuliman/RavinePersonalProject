@@ -1,11 +1,18 @@
 //Creating the session variable
 var mySession = window.sessionStorage;
+var myCookie = document.cookie;
 
 //Filters list as they browse
 var filters = {
     "brand": [],
     "article" : [],
-    "gender": [],
+    "gender": []
+};
+
+var user = {
+    "email": null,
+    "username" : null,
+    "password": null
 };
 
 //All filter sections
@@ -38,7 +45,7 @@ function allFilter(sections){
 
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
-    if (mySession == null){
+    if (mySession.filters == null){
         return
     } else {
         mySessionJson = sessionParser()
@@ -82,4 +89,21 @@ function sessionParser(){
     var filtersParsed = mySession.filters
     filtersParsed = JSON.parse(filtersParsed)
     return filtersParsed
+}
+
+function signUp(){
+    var email = document.getElementById("email-sign-up").value;
+    var username = document.getElementById("username-sign-up").value;
+    var password = document.getElementById("password-sign-up").value;
+    var passwordCon = document.getElementById("password-confirm-sign-up").value;
+    if (password != passwordCon){
+        console.log("pass")
+        return;
+    }
+    user.email = email
+    user.username = username 
+    user.password = password
+    document.cookie = "userInfo = " + JSON.stringify(user);
+    console.log(myCookie)
+    console.log(document.cookie)
 }

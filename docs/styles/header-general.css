@@ -1,6 +1,7 @@
 @import "description-page-table.css";
 @import "navbar.css";
 @import "sidebar.css";
+@import "modals.css";
 
     .centered {
         text-align: center;
