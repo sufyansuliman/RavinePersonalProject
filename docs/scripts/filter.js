@@ -45,12 +45,11 @@ function allFilter(sections){
 
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
+    if (myLocal.userInfo != "null"){
+        newPage();
+    }
     if (mySession.filters == null){
-        if (myLocal.userInfo == "null"){
-            return;
-        } else {
-            newPage();
-        }
+        return;
     } else {
         mySessionJson = sessionParser()
         sidebarPop()
@@ -124,6 +123,6 @@ function newPage(){
 }
 
 function logOut(){
-    myLocal.userInfo = null;
+    myLocal.clear();
     location.reload();
 }
