@@ -12,9 +12,13 @@
     <script type="text/javascript" src="scripts/filter.js"></script>
 </head>
 <!-- Top Header -->
-<div class = "centered" >
-    <h1>Shopfilt <i class="fas fa-running fa-sm"></i> <i class="fas fa-shopping-bag fa-sm"></i></h1>
-    <h2 class="one-liner">Group all your favorite retailers into one! </h2>
+<div class = "centered">
+    <h1 class= "title">Shopfilt <i class="fas fa-running fa-sm"></i> <i class="fas fa-shopping-bag fa-sm"></i></h1>
+    <h3 class="welcome" id = "welcome-text"> Welcome </h3>
+    <div>
+        <h2 class="one-liner">Group all your favorite retailers into one! </h2>
+        <a href = "#" onclick = "logOut()" class="log-out button" id = "log-out"> Log Out </a>
+    </div>
 </div>
 <!-- Navbar -->
 <nav class="navbar container-fluid" id = "navbar-format">
@@ -26,7 +30,7 @@
         <li class="navbar-headers"><a href="bestdeals.html">Best Deals <i class="fas fa-percent"></i></a></li>
         <li class="navbar-headers"><a href="description.html">About Shopfilt <i class="far fa-address-card"></i></a></li>
     </ul>
-    <ul class="nav">
+    <ul class="nav" id = "sign-log">
         <li class = "navbar-header-right"><a href="#" data-toggle= "modal" data-target="#login">Login</a></li>
         <li class = "navbar-header-last"><a href="#" data-toggle= "modal" data-target="#sign-up">Sign Up</a></li>
     </ul>
@@ -92,7 +96,7 @@
                 <input type = "text" class = "modal-fields" id = "password-login">
             </div>
             <div class="modal-footer">
-                <button class = "btn btn-default" data-dismiss="modal"> Close</button>
+                <button class = "btn btn-default" data-dismiss="modal" id = "close-login"> Close</button>
                 <button class = "btn btn-primary" id = "login-button">Login</button>
             </div>
         </div>
@@ -115,7 +119,7 @@
                 <input type = "text" class = "modal-fields" id = "password-confirm-sign-up">
             </div>
             <div class="modal-footer">
-                <button class = "btn btn-default" data-dismiss="modal"> Close</button>
+                <button class = "btn btn-default" data-dismiss="modal" id = "close-sign-up"> Close</button>
                 <button class = "btn btn-primary" id = "sign-up-button" onclick = "return signUp()">Sign Up</button>
             </div>
         </div>

@@ -1,6 +1,6 @@
 //Creating the session variable
 var mySession = window.sessionStorage;
-var myCookie = document.cookie;
+var myLocal = window.localStorage;
 
 //Filters list as they browse
 var filters = {
@@ -46,7 +46,11 @@ function allFilter(sections){
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
     if (mySession.filters == null){
-        return
+        if (myLocal.userInfo == "null"){
+            return;
+        } else {
+            newPage();
+        }
     } else {
         mySessionJson = sessionParser()
         sidebarPop()
@@ -97,13 +101,29 @@ function signUp(){
     var password = document.getElementById("password-sign-up").value;
     var passwordCon = document.getElementById("password-confirm-sign-up").value;
     if (password != passwordCon){
-        console.log("pass")
+        alert("Passwords don't match");
         return;
     }
     user.email = email
     user.username = username 
     user.password = password
-    document.cookie = "userInfo = " + JSON.stringify(user);
-    console.log(myCookie)
-    console.log(document.cookie)
+    myLocal.userInfo = JSON.stringify(user)
+    document.getElementById("close-sign-up").click()
+    newPage()
+}
+
+function newPage(){
+    var signLog = document.getElementById("sign-log");
+    var welcome = document.getElementById("welcome-text");
+    var logOut = document.getElementById("log-out")
+    signLog.style.display = "None";
+    welcome.style.display = "block";
+    logOut.style.display = "block";
+    localParsed = JSON.parse(myLocal.userInfo);
+    welcome.innerText = "Welcome" + " " + localParsed.username;
+}
+
+function logOut(){
+    myLocal.userInfo = null;
+    location.reload();
 }
