@@ -45,7 +45,7 @@ function allFilter(sections){
 
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
-    if (myLocal.userInfo != "null"){
+    if (myLocal.userInfo != null){
         newPage();
     }
     if (mySession.filters == null){
@@ -124,5 +124,11 @@ function newPage(){
 
 function logOut(){
     myLocal.clear();
+    var signLog = document.getElementById("sign-log");
+    var welcome = document.getElementById("welcome-text");
+    var logOut = document.getElementById("log-out")
+    welcome.style.display = "None";
+    signLog.style.display = "block";
+    logOut.style.display = "None";
     location.reload();
 }
