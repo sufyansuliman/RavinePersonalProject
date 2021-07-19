@@ -1,11 +1,80 @@
-    .navbar-headers{
-        text-align: center;
-        border-right: solid 1px rgb(34, 34, 34);
-        font-family: monospace;
-    }
-
     #navbar-format{
         margin-top: 20px; 
         border: solid 1px rgb(34, 34, 34); 
-        background-color: #e6dcc7
+        border-bottom: 0;
+        background-color: #e6dcc7;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #ordered li {
+        float: left;
+    }
+
+    #ordered li a{
+        margin-right: 10px;
+        font-size: 15px;
+        font-family: monospace;
+        color: black;
+    }
+
+    .navbar-headers{
+        padding-left: 5px;
+        margin-left: 5px;
+        border-right: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-headerss{
+        padding-left: 5px;
+        margin-left: 5px;
+        border-right: 1px solid black;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .navbar-header-left{
+        font-family: monospace;
+        margin-left: 5px;
+        border-right: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-header-left:hover{
+        background: rgb(156, 160, 216);
+    }
+
+    .navbar-header-right{
+        font-family: monospace;
+        border-left: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 12px;
+        float: right;
+    }
+
+    .navbar-header-last{
+        font-family: monospace;
+        border-left: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        float: right;
+    }
+
+    ul.nav li{
+        padding-left: 10px;
+    }
+
+    ul.nav li a{
+        color: black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    nav{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }

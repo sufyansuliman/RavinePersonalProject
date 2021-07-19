@@ -1,17 +1,21 @@
 @import "description-page-table.css";
 @import "navbar.css";
 @import "sidebar.css";
+@import "modals.css";
 
     .centered {
-        text-align: center;
         line-height: 15px;
         color: black;
         font-family: monospace;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .one-liner {
         font-size: 20px; 
         line-height: 1px;
+        margin-top: 15px;
+        display: inline;
     }
 
     .black-text {
@@ -19,5 +23,31 @@
     }
 
     .fonted {
+        font-family: monospace;
+    }
+
+    .title{
+        display: inline;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .welcome{
+        display: inline;
+        float: right;
+        margin-right: 30px;
+        font-family: monospace;
+        font-size: 15px;
+        margin-top: 15px;
+        display: none;
+    }
+
+    .log-out{
+        display: inline;
+        float: right;
+        margin-right: 30px;
+        display: none;
+        font-size: 12px;
         font-family: monospace;
     }

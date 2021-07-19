@@ -1,0 +1,25 @@
+.modal-elements{
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-header{
+    font-family: monospace;
+    background: #e6dcc7;
+    border: solid 1px black;
+}
+
+.modal-fields{
+    margin-bottom: 15px;
+}
+
+.modal-body{
+    border: solid 1px black;
+    border-top: 0;
+}
+
+.modal-footer{
+    border: solid 1px black;
+    border-top: 0;
+}

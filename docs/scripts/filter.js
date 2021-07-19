@@ -1,11 +1,18 @@
 //Creating the session variable
 var mySession = window.sessionStorage;
+var myLocal = window.localStorage;
 
 //Filters list as they browse
 var filters = {
     "brand": [],
     "article" : [],
-    "gender": [],
+    "gender": []
+};
+
+var user = {
+    "email": null,
+    "username" : null,
+    "password": null
 };
 
 //All filter sections
@@ -38,8 +45,11 @@ function allFilter(sections){
 
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
-    if (mySession == null){
-        return
+    if (myLocal.userInfo != null){
+        newPage();
+    }
+    if (mySession.filters == null){
+        return;
     } else {
         mySessionJson = sessionParser()
         sidebarPop()
@@ -82,4 +92,43 @@ function sessionParser(){
     var filtersParsed = mySession.filters
     filtersParsed = JSON.parse(filtersParsed)
     return filtersParsed
+}
+
+function signUp(){
+    var email = document.getElementById("email-sign-up").value;
+    var username = document.getElementById("username-sign-up").value;
+    var password = document.getElementById("password-sign-up").value;
+    var passwordCon = document.getElementById("password-confirm-sign-up").value;
+    if (password != passwordCon){
+        alert("Passwords don't match");
+        return;
+    }
+    user.email = email
+    user.username = username 
+    user.password = password
+    myLocal.userInfo = JSON.stringify(user)
+    document.getElementById("close-sign-up").click()
+    newPage()
+}
+
+function newPage(){
+    var signLog = document.getElementById("sign-log");
+    var welcome = document.getElementById("welcome-text");
+    var logOut = document.getElementById("log-out")
+    signLog.style.display = "None";
+    welcome.style.display = "block";
+    logOut.style.display = "block";
+    localParsed = JSON.parse(myLocal.userInfo);
+    welcome.innerText = "Welcome" + " " + localParsed.username;
+}
+
+function logOut(){
+    myLocal.clear();
+    var signLog = document.getElementById("sign-log");
+    var welcome = document.getElementById("welcome-text");
+    var logOut = document.getElementById("log-out")
+    welcome.style.display = "None";
+    signLog.style.display = "block";
+    logOut.style.display = "None";
+    location.reload();
 }
