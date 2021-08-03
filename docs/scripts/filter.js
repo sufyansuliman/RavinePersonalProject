@@ -63,6 +63,7 @@ function filterStoring(){
             }
         }
     }
+    scrape();
 }
 
 //Pop side bar out or in
