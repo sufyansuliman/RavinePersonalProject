@@ -8,30 +8,25 @@
     <meta name = "description" content = "A site that groups all your favorite stores into one">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-    <link rel="stylesheet" type = "text/css" href="styles/header-general.css"/>
+    <link rel="stylesheet" type = "text/css" href="/styles/header-general.css"/>
     <script type="text/javascript" src="scripts/filter.js"></script>
-    <script type="module" src="scripts/scraping.js"></script>
 </head>
 <!-- Top Header -->
-<div class = "centered">
-    <h1 class= "title">Shopfilt <i class="fas fa-running fa-sm"></i> <i class="fas fa-shopping-bag fa-sm"></i></h1>
-    <h3 class="welcome" id = "welcome-text"> Welcome </h3>
-    <div>
-        <h2 class="one-liner">Group all your favorite retailers into one! </h2>
-        <a href = "#" onclick = "logOut()" class="log-out button" id = "log-out"> Log Out </a>
-    </div>
+<div class = "centered" >
+    <h1>Shopfilt <i class="fas fa-running fa-sm"></i> <i class="fas fa-shopping-bag fa-sm"></i></h1>
+    <h2 class="one-liner">Group all your favorite retailers into one! </h2>
 </div>
 <!-- Navbar -->
 <nav class="navbar container-fluid" id = "navbar-format">
     <ul class="nav" id = "ordered">
         <li class="navbar-header-left"><a id="menu-toggle" onclick = "return sidebarPop()"><i class="fas fa-outdent"></i></a></li>
-        <li class="navbar-headers"><a href="index.html">Home <i class="fas fa-home"></i></a></li>
-        <li class="navbar-headers"><a href="newreleases.html">New Releases <i class="fas fa-newspaper"></i></a></li>
-        <li class="navbar-headers"><a href="popular.html">Popular <i class="fas fa-fire-alt"></i></a></li>
-        <li class="navbar-headers"><a href="bestdeals.html">Best Deals <i class="fas fa-percent"></i></a></li>
-        <li class="navbar-headers"><a href="description.html">About Shopfilt <i class="far fa-address-card"></i></a></li>
+        <li class="navbar-headers"><a href="index">Home <i class="fas fa-home"></i></a></li>
+        <li class="navbar-headers"><a href="newreleases">New Releases <i class="fas fa-newspaper"></i></a></li>
+        <li class="navbar-headers"><a href="popular">Popular <i class="fas fa-fire-alt"></i></a></li>
+        <li class="navbar-headers"><a href="bestdeals">Best Deals <i class="fas fa-percent"></i></a></li>
+        <li class="navbar-headers"><a href="description">About Shopfilt <i class="far fa-address-card"></i></a></li>
     </ul>
-    <ul class="nav" id = "sign-log">
+    <ul class="nav">
         <li class = "navbar-header-right"><a href="#" data-toggle= "modal" data-target="#login">Login</a></li>
         <li class = "navbar-header-last"><a href="#" data-toggle= "modal" data-target="#sign-up">Sign Up</a></li>
     </ul>
@@ -77,7 +72,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Home Page</p>
+                    <p>Popular Page</p>
                 </div>
             </div>
         </div>
@@ -97,7 +92,7 @@
                 <input type = "text" class = "modal-fields" id = "password-login">
             </div>
             <div class="modal-footer">
-                <button class = "btn btn-default" data-dismiss="modal" id = "close-login"> Close</button>
+                <button class = "btn btn-default" data-dismiss="modal"> Close</button>
                 <button class = "btn btn-primary" id = "login-button">Login</button>
             </div>
         </div>
@@ -120,8 +115,8 @@
                 <input type = "text" class = "modal-fields" id = "password-confirm-sign-up">
             </div>
             <div class="modal-footer">
-                <button class = "btn btn-default" data-dismiss="modal" id = "close-sign-up"> Close</button>
-                <button class = "btn btn-primary" id = "sign-up-button" onclick = "return signUp()">Sign Up</button>
+                <button class = "btn btn-default" data-dismiss="modal"> Close</button>
+                <button class = "btn btn-primary" id = "sign-up-button">Sign Up</button>
             </div>
         </div>
     </div>
