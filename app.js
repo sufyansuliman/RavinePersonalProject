@@ -1,27 +1,13 @@
-const http = require("http");
-const fs = require("fs");
+const express = require("express");
+const path = require("path");
 
-const hostname = "127.0.0.1";
-const port = 3000;
+//Initialize Express object
+const app = express();
 
-const server = http.createServer((req, res) =>{
-    if (req.url == "/"){
-        req.url = "index"
-    }
-    var fullURL = "client/templates/" + req.url + ".html"
-    console.log(fullURL)
-    res.writeHead(200, {'Content-Type' : "text/html"});
-    fs.readFile(fullURL, function(error, data){
-    if (error){
-        res.writeHead(404)
-        res.write("Error: Not Found")
-    } else {
-        res.write(data)
-    }
-    res.end();
-    })
-})
+//Setting static folder
+app.use(express.static(path.join(__dirname, "client")));
 
-server.listen(port, hostname, () => {
-    console.log('Server running at http://', hostname, ':', port, '/');
+//App listening 
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
 })
