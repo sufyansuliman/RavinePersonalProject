@@ -1,3 +1,5 @@
+const { parse } = require("path/posix");
+
 //Creating the session variable
 var mySession = window.sessionStorage;
 var myLocal = window.localStorage;
@@ -21,6 +23,7 @@ var allSections = ["brand", "article", "gender"]
 //Master Function when filter is clicked
 function applyFilters(){
     allFilter(allSections);
+    parse();
 }
 
 //Adds checked boxes to filter and session
@@ -41,6 +44,18 @@ function allFilter(sections){
         }
     }
     mySession.setItem("filters", JSON.stringify(filters))
+}
+
+function parse(){
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(filters),
+
+    }
+    fetch("/api", options)
 }
 
 //Runs on page load and checks boxes that were in session storage
