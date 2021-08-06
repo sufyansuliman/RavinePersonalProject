@@ -6,9 +6,10 @@ const app = express();
 
 //Setting static folder
 app.use(express.static(path.join(__dirname, "client")));
+app.use(express.json());
 
 app.post("/api", (req, res) =>{
-    console.log(req);
+    res.json(req.body);
 })
 
 //App listening 

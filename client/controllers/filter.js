@@ -1,5 +1,3 @@
-const { parse } = require("path/posix");
-
 //Creating the session variable
 var mySession = window.sessionStorage;
 var myLocal = window.localStorage;
@@ -52,10 +50,11 @@ function parse(){
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(filters),
-
+        body: JSON.stringify(filters)
     }
-    fetch("/api", options)
+    fetch("/api", options).then(res =>{
+        console.log(res)
+    })
 }
 
 //Runs on page load and checks boxes that were in session storage
@@ -78,7 +77,7 @@ function filterStoring(){
             }
         }
     }
-    scrape();
+    parse();
 }
 
 //Pop side bar out or in
