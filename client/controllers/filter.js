@@ -21,7 +21,7 @@ var allSections = ["brand", "article", "gender"]
 //Master Function when filter is clicked
 function applyFilters(){
     allFilter(allSections);
-    parse();
+    getData(filters);
 }
 
 //Adds checked boxes to filter and session
@@ -44,19 +44,6 @@ function allFilter(sections){
     mySession.setItem("filters", JSON.stringify(filters))
 }
 
-function parse(){
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(filters)
-    }
-    fetch("/api", options).then(res =>{
-        console.log(res)
-    })
-}
-
 //Runs on page load and checks boxes that were in session storage
 function filterStoring(){
     if (myLocal.userInfo != null){
@@ -77,7 +64,31 @@ function filterStoring(){
             }
         }
     }
-    parse();
+}
+
+function getData(filt){
+    options = {
+        method: "GET",
+        headers: {"Content-Type": "application/json"}
+    }
+    var gen = filt["gender"]
+    var art = filt["article"]
+    var bra = filt["brand"]
+    console.log(gen, art, bra)
+    if (bra == "Champion"){
+        if (art == "Pants"){
+            art = "bottoms.html"
+        }
+        if (art == "Shirts"){
+            art = "tops.html?silhouette=9814"
+        }
+    }
+    fetch("/api/?prodquery=" + bra + "&" + art + "&" + gen, options)
+    .then(res => {
+        return res.json()
+    }).then(data => {
+        console.log("getData", data)
+    })
 }
 
 //Pop side bar out or in
